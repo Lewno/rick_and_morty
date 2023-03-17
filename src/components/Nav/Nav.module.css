@@ -1,0 +1,28 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding: 1rem 5rem;
+    background-color:#43fff655;
+    border-radius: 1rem;
+    align-items:center;
+    justify-content: space-between;
+ }
+
+ .options{
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+.options a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.options a:hover{
+    transform: scale(1.3);
+}

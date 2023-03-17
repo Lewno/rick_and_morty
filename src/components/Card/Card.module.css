@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    text-align: center;
+    margin: 3rem 0;
+ }
+
+.containerCard{
+    flex-wrap: wrap;
+    width: max-content;
+}
+
+.containerCard:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 3rem 0 rgb(255, 0, 212);
+}
+
+.box{
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.titulo{
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.7rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: max-content;
+    max-width: 80%;
+    margin: 0.5rem auto;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+}
+
+.buttonX{
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+}
+
+.buttonCora{
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+}
+
+
+
+.info{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    box-shadow: 0 0 2rem 0 rgb(255, 255, 255);
+    width: 100%;
+}
+
+.info h2{
+    border:2px solid black;
+    width: 10rem;
+}
+
+.info h2::content{
+    margin: auto;
+}
+
+
+
+.image{
+    width: 100%;
+    height: max-content;  
+    border-radius: 1rem;
+    border:2px solid black;
+    box-shadow: 0 0 2rem 0 rgb(255, 255, 255);
+}
+
+
+@media screen  and (max-width: 500px){
+    .containerCard{
+        margin: 3rem auto;
+    }
+}
