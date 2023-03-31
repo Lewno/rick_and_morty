@@ -11,16 +11,6 @@ import { useEffect, useState } from 'react';
 
 function App () {
 
-  // ------------- Ej --------------------------
-  // const [users,SetUsers] = useState([{}]);
-
-  // const searchUser = ({id}) => {
-  //   fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-  //   .then((res) => res.json())
-  //   .then((data) => SetUsers([...users,data])); // data es un objeto del  usuario
-  // };
-
-  //----------------- Hacer -------------------------
   const [characters,SetCharacters] = useState([]);
   const {pathname} = useLocation();
   const [access,SetAccess] = useState(false);
@@ -35,9 +25,8 @@ function App () {
 
   // funcion onSearch
   const onSearch = (id) =>{
-    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
     const URL_BASE = "http://localhost:3001" 
-    // const KEY = "d0ee1c6a7858.3c17c7ec92d4b8f6f0ae";
+    
 
     if(characters.find(char => char.id === id)){
       return alert("Personaje Repetido");
