@@ -35,14 +35,15 @@ function App () {
 
   // funcion onSearch
   const onSearch = (id) =>{
-    const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    const KEY = "d0ee1c6a7858.3c17c7ec92d4b8f6f0ae";
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    const URL_BASE = "http://localhost:3001" 
+    // const KEY = "d0ee1c6a7858.3c17c7ec92d4b8f6f0ae";
 
     if(characters.find(char => char.id === id)){
       return alert("Personaje Repetido");
     } 
 
-    fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+    fetch(`${URL_BASE}/onsearch/${id}`)
     .then(response => response.json())
     .then(data=>{
       if(data.name){

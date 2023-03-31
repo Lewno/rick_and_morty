@@ -1,0 +1,22 @@
+.about{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 60%;
+    text-align: center;
+    margin: 5rem;
+    background-color: rgba(255, 255, 255, 0.184);
+    border-radius: 1rem;
+    border: 0.2rem solid black;
+    box-shadow: 1rem 1rem 3rem 1rem rgb(149, 12, 176);
+    padding: 3rem;
+}
+
+.icons{
+    width: 30%;
+    margin: 1rem auto;
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}
