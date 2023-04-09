@@ -1,0 +1,106 @@
+.container{
+    height: 40vh;
+    width: 20vw;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: 0.5s;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+}
+
+.login{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+form{
+    width: 80%;
+    margin: auto;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-family: "Get Schwifty";
+    color: #efa6ef;
+    text-shadow: 0.4rem 0.4rem  #000;
+}
+
+.container-line{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.name-line{
+    font-size: 1rem;
+}
+
+.imput-line{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #cbcbcb;
+    outline: none;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.button-login{
+    width: 100%;
+    height: 3rem;
+    border-radius: 3.5rem;
+    background: rgba(255,255,255,0.14);
+    color: white;
+    font-weight: 600;
+    border : 1px solid white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.validation{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.error{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #ff0000;
+    outline: none;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.success{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #00ff11;
+    outline: none;
+    margin-bottom: 1rem;
+    color: white;
+}

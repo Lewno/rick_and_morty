@@ -2,7 +2,7 @@
     width: 15rem;
 }
 
-button {
+.add {
     text-decoration: none;
     position: absolute;
     font-size: 1rem;
@@ -21,7 +21,7 @@ button {
     border-color: black;
    }
    
-   button:hover {
+   .add:hover {
     cursor: pointer;
     background-color: rgba(238, 142, 220, 0.662);
    }
