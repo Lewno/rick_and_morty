@@ -14,12 +14,12 @@ function Card({id,image,name,species,gender,onClose,myFavorites}) {
 
    const addFavorite = async (character) => {
       await axios
-        .post("http://localhost:3001/rickandmorty/fav", character)
+        .post("https://rickandmorty-production-4571.up.railway.app/rickandmorty/fav", character)
         dispatch(getFavorites());
     };
 
     const removeFavorite = async (id) => {
-      await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
+      await axios.delete(`https://rickandmorty-production-4571.up.railway.app/rickandmorty/fav/${id}`);
       dispatch(getFavorites());
       alert("Eliminado con éxito");
     };
