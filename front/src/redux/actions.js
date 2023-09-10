@@ -16,10 +16,10 @@ export const addFavorite = (character) =>{
 export const removeFavorite = (id) =>{
   return {type:REMOVE_FAVORITE,payload : id};
 };
+const URL_BASE = "https://rickandmorty-production-4571.up.railway.app";
 
 export const getCharacterDetail = (id) => {
   return async function (dispatch) {
-    const URL_BASE = "http://localhost:3001";
     const response = await axios.get(`${URL_BASE}/detail/${id}`);
     dispatch({ type: GET_CHARACTER_DETAIL, payload: response.data });
   };
@@ -27,7 +27,6 @@ export const getCharacterDetail = (id) => {
 
 export const getFavorites = () => {
   return async function (dispatch) {
-    const URL_BASE = "http://localhost:3001";
     const response = await axios.get(`${URL_BASE}/rickandmorty/fav`);
     dispatch({ type: GET_FAVORITES, payload: response.data });
   };
@@ -35,7 +34,6 @@ export const getFavorites = () => {
 
 export const filterCards = (gender) =>{
   return async function (dispatch) {
-    const URL_BASE = "http://localhost:3001";
     const response = await axios.get(`${URL_BASE}/rickandmorty/fav`);
     dispatch({type:FILTER, payload : response.data.filter(
       (char)=>char.gender === gender)});
@@ -44,7 +42,6 @@ export const filterCards = (gender) =>{
 
 export const orderCards = (id) =>{
   return async function (dispatch) {
-    const URL_BASE = "http://localhost:3001";
     const response = await axios.get(`${URL_BASE}/rickandmorty/fav`);
     if(id === "Ascendente") {response.data.sort((a,b)=>a.id - b.id)}
     else {response.data.sort((a,b)=>b.id - a.id)}
