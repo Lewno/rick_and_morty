@@ -26,7 +26,7 @@ function App () {
 
   // funcion onSearch
   const onSearch = (id) =>{
-    const URL_BASE = "http://localhost:3001" 
+    const URL_BASE = "https://rickandmorty-production-4571.up.railway.app" 
     
 
     if(characters.find(char => char.id === id)){
