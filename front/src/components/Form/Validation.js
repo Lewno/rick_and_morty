@@ -17,8 +17,6 @@ const validation = (userData,errorsState) =>{
         errors.password ="Por favor completa este campo";
     else if (userData.password.length<6 && userData.password.length>20)
         errors.password ="Debe estar entre 6 a 20 caracteres";
-    else if(!/\d/.test(userData.password))
-        errors.password ="La contraseña deben ser numeros";
     else {
         errors.password ="";
     }

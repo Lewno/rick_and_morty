@@ -6,6 +6,7 @@ import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form';
 import Favorites from './components/Favorites/Favorites';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2"
 
 import { useEffect, useState } from 'react';
 
@@ -20,7 +21,7 @@ function App () {
   },[access]);
 
   const username = "aaron@gmail.com";
-  const password = "aaron17";
+  const password = "carlosbenites";
 
 
   // funcion onSearch
@@ -52,7 +53,11 @@ function App () {
       SetAccess(true);
       navigate("/home");
     } else{
-      alert("Credenciales incorrectas");
+      Swal.fire({
+        icon: 'error',
+        title: 'Intenta con este email y contraseña',
+        text: 'aaron@gmail.com && carlosbenites',
+      })
     }
   }
 

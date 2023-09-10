@@ -4,7 +4,7 @@ import style from "./Favorites.module.css";
 import { useDispatch } from 'react-redux';
 import {orderCards, filterCards} from "../../redux/actions";
 
-const Favorites = () =>{
+const Favorites = ({onClose}) =>{
     const dispatch = useDispatch()
     const favorites =useSelector(state => state.myFavorites);
 
@@ -20,13 +20,13 @@ const Favorites = () =>{
     return (
         <div className={style.container}> 
             <div className={style.selection}>
-                <select onChange={ordernar}>
-                    <option value="order" disabled selected="selected">Order by</option>    
+                <select onChange={ordernar} defaultValue={"order"}>
+                    <option value="order" disabled >Order by</option>    
                     <option value="Ascendente">Ascendente</option>    
                     <option value="Descendente">Descendente</option>
                 </select>    
-                <select onChange={filtrar}>
-                    <option value="order" disabled selected="selected">filter by</option>    
+                <select onChange={filtrar} defaultValue={"order"}>
+                    <option value="order" disabled >filter by</option>    
                     <option value="Male">Male</option>    
                     <option value="Female">Female</option>
                     <option value="Genderless">Genderless</option>    
@@ -44,6 +44,8 @@ const Favorites = () =>{
                           species = {species} 
                           gender = {gender} 
                           image = {image} 
+                          key={id}
+                          onClose={onClose}
                        />
                     );
                  })
